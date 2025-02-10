@@ -1,0 +1,30 @@
+{
+  "name": "generictypealiasesdemo",
+  "description": "Demo app to test out generic type aliases",
+  "scripts": {
+    "markdown:format": "markdownlint -f",
+    "markdown:lint": "markdownlint",
+    "prettier:format": "prettier --write --ignore-unknown",
+    "prettier:lint": "prettier --check --ignore-unknown",
+    "prepare": "husky"
+  },
+  "author": "Ryan Kes <ryan@ryankes.eu>",
+  "license": "GPL-3.0-only",
+  "lint-staged": {
+    "**/*": "pnpm prettier:format",
+    "**/*.md": "pnpm markdown:format",
+    "**/Dockerfile": "docker compose run --rm hadolint hadolint",
+    ".husky/commit-msg": "docker compose run --rm shellcheck -x",
+    ".husky/pre-commit": "docker compose run --rm shellcheck -x",
+    ".husky/pre-push": "docker compose run --rm shellcheck -x"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.7.1",
+    "@commitlint/config-conventional": "19.7.1",
+    "husky": "9.1.7",
+    "lint-staged": "15.4.3",
+    "markdownlint-cli": "0.44.0",
+    "prettier": "3.5.0",
+    "prettier-plugin-sort-json": "4.1.1"
+  }
+}

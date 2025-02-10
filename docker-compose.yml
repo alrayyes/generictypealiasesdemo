@@ -1,0 +1,19 @@
+services:
+  golang:
+    build:
+      dockerfile: docker/golang/Dockerfile
+    volumes:
+      - ./:/app
+    working_dir: /app
+  hadolint:
+    build:
+      dockerfile: docker/hadolint/Dockerfile
+    working_dir: /app
+    volumes:
+      - ./:/app
+  shellcheck:
+    build:
+      dockerfile: docker/shellcheck/Dockerfile
+    working_dir: /app
+    volumes:
+      - ./:/app

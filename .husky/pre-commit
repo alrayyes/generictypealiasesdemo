@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+set -e
+
+docker compose run --rm -T golang go generate ./...
+docker compose run --rm -T golang go fmt ./...
+
+docker compose run --rm -T golang go mod download
+docker compose run --rm -T golang go build -v
+
+golangci-lint run
+docker compose run --rm -T golang go test -cover ./...

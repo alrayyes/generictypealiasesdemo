@@ -1,0 +1,5 @@
+**/*.md
+pnpm-lock.yaml
+.pnpm-store
+.go
+node_modules/
