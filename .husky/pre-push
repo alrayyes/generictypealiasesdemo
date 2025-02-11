@@ -15,5 +15,5 @@ docker compose run --rm -T shellcheck -x ./.husky/commit-msg
 docker compose run --rm -T golang go mod download
 docker compose run --rm -T golang go build -v
 
-golangci-lint run
+docker compose run --rm -T golang golangci-lint run
 docker compose run --rm -T golang go test -cover ./...
