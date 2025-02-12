@@ -12,8 +12,7 @@ docker compose run --rm -T shellcheck -x ./.husky/pre-commit
 docker compose run --rm -T shellcheck -x ./.husky/pre-push
 docker compose run --rm -T shellcheck -x ./.husky/commit-msg
 
-go mod download
-go build -v
+go mod download && go build -v
 
 golangci-lint run
 go test -cover ./...
