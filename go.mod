@@ -1,3 +1,3 @@
 module github.com/alrayyes/generictypealiasesdemo
 
-go 1.24rc3
+go 1.24
