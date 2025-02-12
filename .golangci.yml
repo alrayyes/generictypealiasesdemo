@@ -1,5 +1,5 @@
 linters:
   enable-all: true
   disable:
-    - exportloopref
     - forbidigo
+    - tenv
