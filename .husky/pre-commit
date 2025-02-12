@@ -11,3 +11,4 @@ go build -v
 golangci-lint run
 go test -cover ./...
 
+pnpm dlx lint-staged -r
