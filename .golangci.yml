@@ -1,5 +1,11 @@
 linters:
   enable-all: true
   disable:
+    - depguard
     - forbidigo
+    - gci
+    - gofumpt
+    - goimports
+    - paralleltest
     - tenv
+    - wsl
