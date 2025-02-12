@@ -6,7 +6,7 @@ import (
 	"github.com/alrayyes/generictypealiasesdemo/oldpkg"
 )
 
-// This is possible since golang 1.24.
+// This is possible since go 1.24.
 type newUser[T any] = oldpkg.User[T]
 
 func main() {
