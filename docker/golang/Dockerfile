@@ -1,2 +1,2 @@
-FROM golang:1.24rc3-alpine3.21@sha256:edce310e0bd85e9cc522eb8e5bcd8c46bc8a51a8b0cf68f9f0ec0126c13b980f
+FROM golang:1.24-alpine3.21@sha256:5429efb7de864db15bd99b91b67608d52f97945837c7f6f7d1b779f9bfe46281
 
