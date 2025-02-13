@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.1.0...v1.2.0) (2025-02-13)
+
+
+### Features
+
+* implement commitizen ([aba06c0](https://github.com/alrayyes/generictypealiasesdemo/commit/aba06c0f71b8ec5f478ee123146ed3310c8692d6))
+
 ## [1.1.0](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.0.1...v1.1.0) (2025-02-13)
 
 
