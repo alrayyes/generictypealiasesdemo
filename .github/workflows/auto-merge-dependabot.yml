@@ -7,7 +7,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  auto-merge-dependabot:
+  auto-merge:
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]' # Only run for Dependabot PRs
     steps:
