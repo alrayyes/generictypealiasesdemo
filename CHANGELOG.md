@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.6](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.4.5...v1.4.6) (2025-02-13)
+
+
+### Bug Fixes
+
+* **ci:** set pnpm version ([f329681](https://github.com/alrayyes/generictypealiasesdemo/commit/f329681cfd0bac9bd235e8166753ff3c0d4d55ce))
+
 ## [1.4.5](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.4.4...v1.4.5) (2025-02-13)
 
 
