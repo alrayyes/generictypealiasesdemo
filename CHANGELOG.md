@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.3](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.3.2...v1.3.3) (2025-02-13)
+
+
+### Bug Fixes
+
+* **ci:** fix incorrect action filenames ([132a1d9](https://github.com/alrayyes/generictypealiasesdemo/commit/132a1d91c15adb04cb4f903690e633a7ee4acd80))
+
 ## [1.3.2](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.3.1...v1.3.2) (2025-02-13)
 
 
