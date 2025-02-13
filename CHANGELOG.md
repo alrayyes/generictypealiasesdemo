@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.5.0...v1.5.1) (2025-02-13)
+
+
+### Bug Fixes
+
+* **ci:** remove auto merge alrayyes prs ([db7ac69](https://github.com/alrayyes/generictypealiasesdemo/commit/db7ac69e941a7814607d83e893313a7b592d79a1))
+
 ## [1.5.0](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.4.7...v1.5.0) (2025-02-13)
 
 
