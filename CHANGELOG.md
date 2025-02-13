@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.5.1...v1.6.0) (2025-02-13)
+
+
+### Features
+
+* **test:** add AboutMe() example ([e4a53c0](https://github.com/alrayyes/generictypealiasesdemo/commit/e4a53c073d43959aafb9341c088fee9361280422))
+
 ## [1.5.1](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.5.0...v1.5.1) (2025-02-13)
 
 
