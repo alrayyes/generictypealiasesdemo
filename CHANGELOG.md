@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.5](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.4.4...v1.4.5) (2025-02-13)
+
+
+### Bug Fixes
+
+* **ci:** use default goreleaser config ([72e0cb6](https://github.com/alrayyes/generictypealiasesdemo/commit/72e0cb61069b750e996a3d5e8ba244924c3ec7d9))
+
 ## [1.4.4](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.4.3...v1.4.4) (2025-02-13)
 
 
