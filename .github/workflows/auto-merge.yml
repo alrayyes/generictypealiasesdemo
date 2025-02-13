@@ -22,7 +22,7 @@ jobs:
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-  auto-merge-relesae-please:
+  auto-merge-release-please:
     runs-on: ubuntu-latest
     if: github.actor == 'github-actions[bot]'
     steps:
