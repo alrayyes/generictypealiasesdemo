@@ -7,7 +7,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  auto-merge:
+  auto-merge-release-please:
     runs-on: ubuntu-latest
     if: github.actor == 'github-actions[bot]'
     steps:
