@@ -8,22 +8,22 @@ import (
 
 func TestUser_AboutMe(t *testing.T) {
 	t.Run("test with an int ID", func(t *testing.T) {
-		user := user.User[int]{
+		intUser := user.User[int]{
 			ID:   0,
 			Name: "Pete",
 		}
-		got := user.AboutMe()
+		got := intUser.AboutMe()
 		want := "Hi, my name is Pete and my ID is 0"
 
 		assert.Equal(t, want, got)
 	})
 
 	t.Run("test with a string ID", func(t *testing.T) {
-		user := user.User[string]{
+		stringUser := user.User[string]{
 			ID:   "a",
 			Name: "Pete",
 		}
-		got := user.AboutMe()
+		got := stringUser.AboutMe()
 		want := "Hi, my name is Pete and my ID is a"
 
 		assert.Equal(t, want, got)
@@ -34,11 +34,11 @@ func TestUser_AboutMe(t *testing.T) {
 			ID string
 		}
 
-		user := user.User[customID]{
+		customIDUser := user.User[customID]{
 			ID:   customID{"a"},
 			Name: "Pete",
 		}
-		got := user.AboutMe()
+		got := customIDUser.AboutMe()
 		want := "Hi, my name is Pete and my ID is {a}"
 
 		assert.Equal(t, want, got)
