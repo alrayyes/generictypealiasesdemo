@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.0.1...v1.1.0) (2025-02-13)
+
+
+### Features
+
+* **ci:** remove release please auto merge ([56bde80](https://github.com/alrayyes/generictypealiasesdemo/commit/56bde80a4ff7915d6801093840538d733c66eb08))
+
+
+### Bug Fixes
+
+* **ci:** set github actor to github-actions[bot] ([a1c7f1b](https://github.com/alrayyes/generictypealiasesdemo/commit/a1c7f1b9cf8f1f7ef874526ada619784005640e8))
+* **docs:** trigger release ([5b6d872](https://github.com/alrayyes/generictypealiasesdemo/commit/5b6d87275e07201de8bb9eb566a0e30adbb33554))
+
 ## [1.0.1](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.0.0...v1.0.1) (2025-02-13)
 
 
