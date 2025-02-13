@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.3.0...v1.3.1) (2025-02-13)
+
+
+### Bug Fixes
+
+* **goreleaser:** add goreleaser config ([dac3a3b](https://github.com/alrayyes/generictypealiasesdemo/commit/dac3a3bbbb7d9faca6d204c10f088a0658f1f726))
+
 ## [1.3.0](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.2.0...v1.3.0) (2025-02-13)
 
 
