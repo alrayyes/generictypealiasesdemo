@@ -1,6 +1,7 @@
 package user_test
 
 import (
+	"fmt"
 	"github.com/alrayyes/generictypealiasesdemo/user"
 	"github.com/stretchr/testify/assert"
 	"testing"
@@ -43,4 +44,13 @@ func TestUser_AboutMe(t *testing.T) {
 
 		assert.Equal(t, want, got)
 	})
+}
+
+func ExampleUser_AboutMe() {
+	intUser := user.User[int]{
+		ID:   1,
+		Name: "James",
+	}
+	fmt.Println(intUser.AboutMe())
+	// Output: Hi, my name is James and my ID is 1
 }
