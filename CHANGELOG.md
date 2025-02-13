@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.2](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.3.1...v1.3.2) (2025-02-13)
+
+
+### Bug Fixes
+
+* **ci:** only run goreleaser on tags ([e298ce6](https://github.com/alrayyes/generictypealiasesdemo/commit/e298ce6f76df4c0499cd53a9f57881408c678d7e))
+* **ci:** try to fix goreleaser ([7923a8b](https://github.com/alrayyes/generictypealiasesdemo/commit/7923a8be21d4f35a37d8ffc08b52b764d64ffb35))
+
 ## [1.3.1](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.3.0...v1.3.1) (2025-02-13)
 
 
