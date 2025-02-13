@@ -1,4 +1,4 @@
-name: Auto-merge Release Please PRs
+name: Auto-merge alrayyes PRs
 
 on: pull_request
 
@@ -9,9 +9,9 @@ permissions:
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
-    if: github.actor == 'github-actions[bot]'
+    if: github.actor == 'alrayyes'
     steps:
-      - name: Enable auto-merge for Release Please PRs
+      - name: Enable auto-merge for alrayyes PRs
         run: gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
