@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.1](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.0.0...v1.0.1) (2025-02-13)
+
+
+### Bug Fixes
+
+* **ci:** re add checkout action ([47dbeaa](https://github.com/alrayyes/generictypealiasesdemo/commit/47dbeaa23fc62c15ff7858db73b022902f90de3b))
+* **ci:** see if this fixes release please auto merge ([d980c23](https://github.com/alrayyes/generictypealiasesdemo/commit/d980c23c31be2982d1217ec4093a37b2ba601d82))
+* **ci:** try renaming releaseplease auto merge action ([f8e5c59](https://github.com/alrayyes/generictypealiasesdemo/commit/f8e5c59be9e33618db8fa7880c05502b0358c56c))
+* **ci:** try using both auto merge steps in 1 action ([d87faa8](https://github.com/alrayyes/generictypealiasesdemo/commit/d87faa858a3028dd223f7e10a869567784505106))
+* **ci:** update keys so both auto merge actions are run ([d5e7ee8](https://github.com/alrayyes/generictypealiasesdemo/commit/d5e7ee8798433f7fe53e6c997470200ba728005a))
+
 ## 1.0.0 (2025-02-13)
 
 
