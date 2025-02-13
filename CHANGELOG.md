@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.7](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.4.6...v1.4.7) (2025-02-13)
+
+
+### Bug Fixes
+
+* **ci:** use custom token to hopefully trigger goreleaser ([c7c123a](https://github.com/alrayyes/generictypealiasesdemo/commit/c7c123a3bfb9b5dd043fdc3f4111a2ad5cd00a86))
+
 ## [1.4.6](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.4.5...v1.4.6) (2025-02-13)
 
 
