@@ -1,3 +1,5 @@
+name: Shellcheck
+
 on:
   push:
 jobs:
