@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.3.3...v1.4.0) (2025-02-13)
+
+
+### Features
+
+* **ci:** run goreleaser on any version ([38fe158](https://github.com/alrayyes/generictypealiasesdemo/commit/38fe15856870464e0fabf23b66a3bda8797790f0))
+
 ## [1.3.3](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.3.2...v1.3.3) (2025-02-13)
 
 
