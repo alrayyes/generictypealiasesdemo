@@ -1,4 +1,4 @@
-name: Auto-merge PRs
+name: Auto-merge Dependabot PRs
 
 on: pull_request
 
@@ -9,7 +9,7 @@ permissions:
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]' || github.actor == 'github-actions[bot]'
+    if: github.actor == 'dependabot[bot]' # Only run for Dependabot PRs
     steps:
       - name: Fetch Dependabot metadata
         id: metadata
