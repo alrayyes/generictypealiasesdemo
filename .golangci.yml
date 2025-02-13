@@ -8,4 +8,5 @@ linters:
     - goimports
     - paralleltest
     - tenv
+    - varnamelen
     - wsl
