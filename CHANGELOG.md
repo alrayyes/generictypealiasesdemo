@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.4](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.4.3...v1.4.4) (2025-02-13)
+
+
+### Bug Fixes
+
+* **ci:** run goreleaser on v* tags ([f1e4d15](https://github.com/alrayyes/generictypealiasesdemo/commit/f1e4d15698fff13fabe0a13fd766184bb5727003))
+
 ## [1.4.3](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.4.2...v1.4.3) (2025-02-13)
 
 
