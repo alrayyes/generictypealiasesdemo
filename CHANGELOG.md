@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.4.0...v1.4.1) (2025-02-13)
+
+
+### Bug Fixes
+
+* **ci:** add names ([80611b7](https://github.com/alrayyes/generictypealiasesdemo/commit/80611b782e45a2666af20a1b7455eb9adb0e1484))
+
 ## [1.4.0](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.3.3...v1.4.0) (2025-02-13)
 
 
