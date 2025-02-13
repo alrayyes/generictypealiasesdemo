@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.2.0...v1.3.0) (2025-02-13)
+
+
+### Features
+
+* **test:** test main ([e118a42](https://github.com/alrayyes/generictypealiasesdemo/commit/e118a425cd8eced0f733f1237cf9625ba6b6533f))
+
 ## [1.2.0](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.1.0...v1.2.0) (2025-02-13)
 
 
