@@ -1,14 +1,14 @@
-package oldpkg_test
+package user_test
 
 import (
-	"github.com/alrayyes/generictypealiasesdemo/oldpkg"
+	"github.com/alrayyes/generictypealiasesdemo/user"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
 func TestUser_AboutMe(t *testing.T) {
 	t.Run("test with an int ID", func(t *testing.T) {
-		user := oldpkg.User[int]{
+		user := user.User[int]{
 			ID:   0,
 			Name: "Pete",
 		}
@@ -19,7 +19,7 @@ func TestUser_AboutMe(t *testing.T) {
 	})
 
 	t.Run("test with a string ID", func(t *testing.T) {
-		user := oldpkg.User[string]{
+		user := user.User[string]{
 			ID:   "a",
 			Name: "Pete",
 		}
@@ -34,7 +34,7 @@ func TestUser_AboutMe(t *testing.T) {
 			ID string
 		}
 
-		user := oldpkg.User[customID]{
+		user := user.User[customID]{
 			ID:   customID{"a"},
 			Name: "Pete",
 		}

@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/alrayyes/generictypealiasesdemo/oldpkg"
+	"github.com/alrayyes/generictypealiasesdemo/user"
 )
 
 // This is possible since go 1.24.
-type newUser[T any] = oldpkg.User[T]
+type newUser[T any] = user.User[T]
 
 func main() {
 	intUser := newUser[int32]{
