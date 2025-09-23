@@ -8,12 +8,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v5
-      - uses: hadolint/hadolint-action@v3.2.0
+      - uses: hadolint/hadolint-action@v3.3.0
         with:
           dockerfile: docker/shellcheck/Dockerfile
-      - uses: hadolint/hadolint-action@v3.2.0
+      - uses: hadolint/hadolint-action@v3.3.0
         with:
           dockerfile: docker/hadolint/Dockerfile
-      - uses: hadolint/hadolint-action@v3.2.0
+      - uses: hadolint/hadolint-action@v3.3.0
         with:
           dockerfile: docker/golang/Dockerfile
