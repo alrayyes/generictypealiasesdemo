@@ -30,11 +30,11 @@ importers:
         specifier: 0.46.0
         version: 0.46.0
       prettier:
-        specifier: 3.7.1
-        version: 3.7.1
+        specifier: 3.7.3
+        version: 3.7.3
       prettier-plugin-sort-json:
         specifier: 4.1.1
-        version: 4.1.1(prettier@3.7.1)
+        version: 4.1.1(prettier@3.7.3)
 
 packages:
 
@@ -947,8 +947,8 @@ packages:
     peerDependencies:
       prettier: ^3.0.0
 
-  prettier@3.7.1:
-    resolution: {integrity: sha512-RWKXE4qB3u5Z6yz7omJkjWwmTfLdcbv44jUVHC5NpfXwFGzvpQM798FGv/6WNK879tc+Cn0AAyherCl1KjbyZQ==}
+  prettier@3.7.3:
+    resolution: {integrity: sha512-QgODejq9K3OzoBbuyobZlUhznP5SKwPqp+6Q6xw6o8gnhr4O85L2U915iM2IDcfF2NPXVaM9zlo9tdwipnYwzg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2219,11 +2219,11 @@ snapshots:
 
   pidtree@0.6.0: {}
 
-  prettier-plugin-sort-json@4.1.1(prettier@3.7.1):
+  prettier-plugin-sort-json@4.1.1(prettier@3.7.3):
     dependencies:
-      prettier: 3.7.1
+      prettier: 3.7.3
 
-  prettier@3.7.1: {}
+  prettier@3.7.3: {}
 
   punycode.js@2.3.1: {}
 
