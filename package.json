@@ -20,7 +20,7 @@
     ".husky/pre-push": "docker compose run --rm shellcheck -x"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.3.0",
+    "@commitlint/cli": "20.3.1",
     "@commitlint/config-conventional": "20.3.0",
     "commitizen": "4.3.1",
     "cz-conventional-changelog": "3.3.0",
