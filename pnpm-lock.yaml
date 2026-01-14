@@ -33,8 +33,8 @@ importers:
         specifier: 3.7.4
         version: 3.7.4
       prettier-plugin-sort-json:
-        specifier: 4.1.1
-        version: 4.1.1(prettier@3.7.4)
+        specifier: 4.2.0
+        version: 4.2.0(prettier@3.7.4)
 
 packages:
 
@@ -949,8 +949,8 @@ packages:
     engines: {node: '>=0.10'}
     hasBin: true
 
-  prettier-plugin-sort-json@4.1.1:
-    resolution: {integrity: sha512-uJ49wCzwJ/foKKV4tIPxqi4jFFvwUzw4oACMRG2dcmDhBKrxBv0L2wSKkAqHCmxKCvj0xcCZS4jO2kSJO/tRJw==}
+  prettier-plugin-sort-json@4.2.0:
+    resolution: {integrity: sha512-jK1w3/7otTvHtv1eoLji2U9mEoOGeyl7QQQ/afLnjht1YtRLSUUk8o0rIIC/HUVXhoGPCFe4SVZbRGYjjUVgvA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       prettier: ^3.0.0
@@ -2237,7 +2237,7 @@ snapshots:
 
   pidtree@0.6.0: {}
 
-  prettier-plugin-sort-json@4.1.1(prettier@3.7.4):
+  prettier-plugin-sort-json@4.2.0(prettier@3.7.4):
     dependencies:
       prettier: 3.7.4
 

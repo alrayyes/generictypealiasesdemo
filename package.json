@@ -28,7 +28,7 @@
     "lint-staged": "16.2.7",
     "markdownlint-cli": "0.47.0",
     "prettier": "3.7.4",
-    "prettier-plugin-sort-json": "4.1.1"
+    "prettier-plugin-sort-json": "4.2.0"
   },
   "config": {
     "commitizen": {
