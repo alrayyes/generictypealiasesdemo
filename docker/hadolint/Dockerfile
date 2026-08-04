@@ -1,1 +1,1 @@
-FROM hadolint/hadolint:v2.15.0-alpine@sha256:ddabce597257a5b466cc60878090de88b0fd191b84eb7652bddfe88ad192d0d5
+FROM hadolint/hadolint:v2.15.1-alpine@sha256:a1d49ae1a4e83c1dbad26b8c1ad7588c8bd1e04f4866b34ad3cac50335198552
