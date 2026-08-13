@@ -1,0 +1,42 @@
+{
+  "ltex.dictionary": {
+    "en-US": [
+      "Biome",
+      "Codecov",
+      "Dependabot",
+      "Dockerfiles",
+      "GoReleaser",
+      "Prettier",
+      "actionlint",
+      "bun",
+      "bunx",
+      "codecov",
+      "commitlint",
+      "devDependencies",
+      "generictypealiasesdemo",
+      "gitignored",
+      "gitleaks",
+      "gofmt",
+      "golangci",
+      "hadolint",
+      "lefthook",
+      "linted",
+      "linting",
+      "lockfile",
+      "ltex-cli-plus",
+      "markdownlint",
+      "pipx",
+      "proselint",
+      "proseWrap",
+      "repo",
+      "testify",
+      "typos",
+      "unshallow",
+      "untracked",
+      "yamllint"
+    ]
+  },
+  "ltex.disabledRules": {
+    "en-US": ["PASSIVE_VOICE"]
+  }
+}
