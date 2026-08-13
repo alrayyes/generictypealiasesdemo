@@ -13,6 +13,14 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
+      # This repo rebases pull requests rather than merging them, and that is a
+      # requirement rather than a preference. GitHub writes the pull request
+      # title into the body of a merge commit, release-please pulls conventional
+      # commits out of a commit body as well as its subject, and so every change
+      # landed by a merge commit was listed twice in the changelog — once for the
+      # commit and once for the merge. Merge commits are switched off in the
+      # repository settings; there is no setting that leaves that body empty.
+      #
       # No `release-type` here on purpose. It's the manifest-less mode, and with
       # nothing recording the current version the action rebuilds history from
       # scratch — which is how it decided a repo sitting on v1.6.0 was due its
