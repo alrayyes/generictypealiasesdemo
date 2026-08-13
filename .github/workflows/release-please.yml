@@ -13,7 +13,12 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
+      # No `release-type` here on purpose. It's the manifest-less mode, and with
+      # nothing recording the current version the action rebuilds history from
+      # scratch — which is how it decided a repo sitting on v1.6.0 was due its
+      # 1.0.0 release. release-please-config.json and .release-please-manifest.json
+      # are picked up by default, and the manifest is the file to correct by
+      # hand when a release goes wrong.
       - uses: googleapis/release-please-action@v5.0.0
         with:
           token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
-          release-type: go
