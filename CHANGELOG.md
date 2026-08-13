@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.2](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.6.1...v1.6.2) (2026-08-13)
+
+
+### Bug Fixes
+
+* repair the deprecated goreleaser config ([751d5e0](https://github.com/alrayyes/generictypealiasesdemo/commit/751d5e03b9856d82d86eb75a72ca1e2b8514f180)), closes [#229](https://github.com/alrayyes/generictypealiasesdemo/issues/229)
+
 ## [1.6.1](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.6.0...v1.6.1) (2026-08-13)
 
 
