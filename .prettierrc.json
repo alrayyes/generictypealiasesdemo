@@ -1,3 +1,4 @@
 {
-  "plugins": ["prettier-plugin-sort-json"]
+  "overrides": [{ "files": "*.md", "options": { "tabWidth": 2 } }],
+  "proseWrap": "preserve"
 }

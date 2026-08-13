@@ -1,5 +1,18 @@
-**/*.md
-pnpm-lock.yaml
-.pnpm-store
-.go
 node_modules/
+bun.lock
+.go
+dist/
+
+# release-please writes this. Reformatting it would just fight the generator.
+CHANGELOG.md
+
+# Prettier is here to fill Biome's gaps, and those gaps are Markdown and YAML.
+# Everything below is a format Biome supports and therefore owns. Narrow this
+# list the day Biome ships Markdown or YAML of its own.
+*.json
+*.jsonc
+*.js
+*.mjs
+*.cjs
+*.ts
+*.css
