@@ -1,6 +1,7 @@
 {
   "name": "generictypealiasesdemo",
   "description": "Demo app to test out generic type aliases",
+  "packageManager": "bun@1.3.14",
   "scripts": {
     "commit": "cz",
     "markdown:format": "markdownlint -f",
@@ -12,8 +13,8 @@
   "author": "Ryan Kes <ryan@ryankes.eu>",
   "license": "GPL-3.0-only",
   "lint-staged": {
-    "**/*": "pnpm prettier:format",
-    "**/*.md": "pnpm markdown:format",
+    "**/*": "bun prettier:format",
+    "**/*.md": "bun markdown:format",
     "**/Dockerfile": "docker compose run --rm hadolint hadolint",
     ".husky/commit-msg": "docker compose run --rm shellcheck -x",
     ".husky/pre-commit": "docker compose run --rm shellcheck -x",
