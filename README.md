@@ -22,8 +22,8 @@ type newUser[T any] = user.User[T]
 `newUser` is not a new type. It's another name for `user.User`, parameter and
 all, so `newUser[int32]` and `user.User[int32]` are the same type to the
 compiler and the methods come along unchanged. The rest of the program builds
-that alias three ways — an `int32` ID, a `string` ID and a local struct ID —
-to watch the parameter survive being renamed across a package boundary.
+that alias three ways — with an integer ID, a string ID and a local struct ID
+— to watch the parameter survive being renamed across a package boundary.
 
 [`user`](./user) holds the generic type itself. It's deliberately dull: the
 interesting behaviour is in the aliasing, not in anything `User` does.
