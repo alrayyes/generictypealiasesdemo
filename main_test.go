@@ -2,10 +2,11 @@ package main
 
 import (
 	"bytes"
-	"github.com/stretchr/testify/assert"
 	"io"
 	"os"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestCmdOutput(t *testing.T) {

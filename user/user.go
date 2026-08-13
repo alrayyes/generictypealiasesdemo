@@ -1,3 +1,6 @@
+// Package user holds the generic type the demo aliases. It is deliberately
+// small: the interesting part is that User's type parameter survives being
+// renamed through an alias in another package, not anything User itself does.
 package user
 
 import "fmt"
