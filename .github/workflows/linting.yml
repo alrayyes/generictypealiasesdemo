@@ -11,6 +11,11 @@ jobs:
     # since the bump, which is a merge that hangs rather than an error anyone
     # sees. The name is written once here, where renaming it is a deliberate act
     # that goes with an edit to the ruleset.
+    #
+    # Which is why this still says Prettier and markdown when the job also runs
+    # Biome. The name is a ruleset key, not a description; changing it to read
+    # better costs a hung merge on every open pull request that already reported
+    # under the old one.
     name: Prettier & markdown linting
     runs-on: ubuntu-22.04
     steps:
@@ -23,7 +28,9 @@ jobs:
           bun-version-file: package.json
       - name: Install dependencies
         run: bun install --frozen-lockfile
+      - name: Biome lint
+        run: bun biome:lint .
       - name: Prettier lint
-        run: bun prettier:lint .
+        run: bun prettier:lint "**/*.{md,yml,yaml}"
       - name: markdown lint
-        run: bun markdown:lint .
+        run: bun markdown:lint

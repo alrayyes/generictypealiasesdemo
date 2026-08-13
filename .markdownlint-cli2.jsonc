@@ -1,0 +1,17 @@
+{
+  // Prettier decides layout, so the rules that also have an opinion about it
+  // are off. Two tools arguing over the same character is a hook that fails
+  // twice and fixes nothing.
+  "config": {
+    "extends": "markdownlint/style/relaxed",
+    "MD004": false,
+    "MD007": false,
+    "MD012": false,
+    "MD049": false,
+    "MD050": false
+  },
+  "globs": ["**/*.md"],
+  // release-please writes the changelog. Laying it out here would only fight
+  // the generator.
+  "ignores": ["CHANGELOG.md", "node_modules/"]
+}
