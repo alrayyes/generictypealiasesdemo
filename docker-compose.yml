@@ -11,9 +11,3 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
-  shellcheck:
-    build:
-      dockerfile: docker/shellcheck/Dockerfile
-    working_dir: /app
-    volumes:
-      - ./:/app
