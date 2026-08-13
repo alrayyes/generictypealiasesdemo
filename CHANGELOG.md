@@ -5,9 +5,7 @@
 
 ### Bug Fixes
 
-* give release-please the manifest it was missing ([23801dc](https://github.com/alrayyes/generictypealiasesdemo/commit/23801dc39c2c8fc2c90bc5f28d571746c9aa72c6))
 * give release-please the manifest it was missing ([cdb2e41](https://github.com/alrayyes/generictypealiasesdemo/commit/cdb2e41f2762e98be7543529280b15824e8aa1f9)), closes [#225](https://github.com/alrayyes/generictypealiasesdemo/issues/225)
-* migrate the golangci-lint config to v2 ([ab06d63](https://github.com/alrayyes/generictypealiasesdemo/commit/ab06d63563e2c76bcd00bb0eb0320f686964017a))
 * migrate the golangci-lint config to v2 ([aaa2155](https://github.com/alrayyes/generictypealiasesdemo/commit/aaa2155d24ef30e436acbab89f6fb3718087db33)), closes [#220](https://github.com/alrayyes/generictypealiasesdemo/issues/220)
 
 ## [1.6.0](https://github.com/alrayyes/generictypealiasesdemo/compare/v1.5.1...v1.6.0) (2025-02-13)
