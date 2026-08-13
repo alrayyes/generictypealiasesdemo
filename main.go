@@ -1,7 +1,12 @@
+// Command generictypealiasesdemo builds the same generic user three ways —
+// through an int32, a string and a local struct — and prints each one. The
+// alias on line 10 is the thing being demonstrated; the rest is a way to watch
+// it hold up against different type arguments.
 package main
 
 import (
 	"fmt"
+
 	"github.com/alrayyes/generictypealiasesdemo/user"
 )
 

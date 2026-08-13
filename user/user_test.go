@@ -2,9 +2,10 @@ package user_test
 
 import (
 	"fmt"
+	"testing"
+
 	"github.com/alrayyes/generictypealiasesdemo/user"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestUser_AboutMe(t *testing.T) {

@@ -1,12 +1,31 @@
+version: "2"
+
+# The standard set — errcheck, govet, ineffassign, staticcheck, unused — plus
+# the ones worth adding. This used to be `enable-all: true` with nine opt-outs,
+# which meant every golangci-lint release could turn on a linter nobody had
+# chosen and fail a build that changed nothing.
 linters:
-  enable-all: true
-  disable:
-    - depguard
-    - forbidigo
-    - gci
+  default: standard
+  enable:
+    - bodyclose
+    - gocritic
+    - gocyclo
+    - misspell
+    - revive
+    - sqlclosecheck
+    - whitespace
+  settings:
+    gocyclo:
+      # Not optional the way the other settings are: the default of 30 is high
+      # enough that almost nothing trips it, so leaving it out enables the
+      # linter for show.
+      min-complexity: 15
+
+# Formatters are their own block in v2. gofumpt and goimports stopped being
+# linters, and naming them under `linters.enable` fails the run outright with
+# "gofumpt is a formatter". `golangci-lint fmt` runs these, which is the fixer
+# for pre-commit; `golangci-lint run` stays the check.
+formatters:
+  enable:
     - gofumpt
     - goimports
-    - paralleltest
-    - tenv
-    - varnamelen
-    - wsl
