@@ -27,3 +27,8 @@ go.work.sum
 .env
 
 dist/
+
+# `vale sync` downloads these. Ignore them by name, never `styles/` wholesale,
+# or the House vocabulary we wrote goes with them.
+styles/Google/
+styles/proselint/

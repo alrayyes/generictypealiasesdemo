@@ -27,6 +27,16 @@ pre-commit:
       glob: "*.{yml,yaml}"
       run: bun run prettier:format {staged_files}
       stage_fixed: true
+    # Vale is style advice, so it reports rather than rewrites. It needs
+    # `vale sync` to have fetched its style packages, hence the second skip.
+    vale:
+      glob: "*.md"
+      skip:
+        - run: "! command -v vale"
+        - run: "! test -d styles/Google"
+      exclude:
+        - CHANGELOG.md
+      run: vale {staged_files}
     hadolint:
       glob: "*Dockerfile"
       run: docker compose run --rm -T hadolint hadolint {staged_files}

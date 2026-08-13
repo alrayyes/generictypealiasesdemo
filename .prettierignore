@@ -3,6 +3,12 @@ bun.lock
 .go
 dist/
 
+# Vale's style packages, fetched by `vale sync` rather than committed. Named
+# individually rather than ignoring styles/ wholesale, so the House vocabulary
+# beside them still gets formatted.
+styles/Google/
+styles/proselint/
+
 # release-please writes this. Reformatting it would just fight the generator.
 CHANGELOG.md
 

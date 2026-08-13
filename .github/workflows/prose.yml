@@ -1,0 +1,56 @@
+name: Prose
+
+on:
+  push:
+
+permissions:
+  contents: read
+
+# One job per tier, so when this goes red the job name says which one you have.
+jobs:
+  vale:
+    name: Vale (style)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # The release binary rather than `go install`: Vale 3.17 needs Go 1.25.7
+      # to build and this repo's toolchain is 1.24. A linter doesn't get to
+      # dictate the project's Go version.
+      - name: Install Vale
+        run: |
+          curl -sSL -o vale.tar.gz \
+            "https://github.com/errata-ai/vale/releases/download/v3.17.1/vale_3.17.1_Linux_64-bit.tar.gz"
+          tar -xzf vale.tar.gz vale
+          echo "$PWD" >> "$GITHUB_PATH"
+      - name: Fetch style packages
+        run: vale sync
+      # CHANGELOG.md is excluded here rather than in .vale.ini: a section with
+      # an empty BasedOnStyles does not disable a file, it just leaves the
+      # inherited styles running.
+      - name: Vale
+        run: vale --glob='!{node_modules/**,styles/**,dist/**,CHANGELOG.md}' .
+
+  ltex:
+    name: LTeX (grammar and spelling)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # ltex-cli-plus is built for Java 21. The bundled-runtime archive still
+      # defers to the runner's JAVA_HOME, which is older, so pin the runtime
+      # here and take the archive that expects one.
+      - name: Set up Java
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5.7.0
+        with:
+          distribution: temurin
+          java-version: "21"
+      # ~300 MB, which is why this is CI only and not a git hook.
+      - name: Install ltex-cli-plus
+        run: |
+          curl -sSL -o ltex.tar.gz \
+            "https://github.com/ltex-plus/ltex-ls-plus/releases/download/18.7.0/ltex-ls-plus-18.7.0.tar.gz"
+          tar -xzf ltex.tar.gz
+          echo "$PWD/ltex-ls-plus-18.7.0/bin" >> "$GITHUB_PATH"
+      # LTeX exits 3 when it finds something, not 1. Testing for a specific
+      # code passes a failing document, so test for non-zero.
+      - name: LTeX
+        run: ltex-cli-plus --client-configuration=.ltex.json README.md
