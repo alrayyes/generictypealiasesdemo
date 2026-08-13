@@ -2,6 +2,14 @@ on:
   push:
     branches:
       - main
+  # For filling in a release that got tagged without binaries. release-please
+  # creates the release and then reports it, so a failure between those two
+  # leaves the goreleaser job gated on an output that never arrived.
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing tag to build and attach binaries to
+        required: true
 
 permissions:
   contents: write
@@ -11,7 +19,11 @@ name: release-please
 
 jobs:
   release-please:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
     steps:
       # This repo rebases pull requests rather than merging them, and that is a
       # requirement rather than a preference. GitHub writes the pull request
@@ -28,5 +40,34 @@ jobs:
       # are picked up by default, and the manifest is the file to correct by
       # hand when a release goes wrong.
       - uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
+        id: release
         with:
           token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
+
+  # goreleaser hangs binaries on the release release-please just created, so it
+  # lives here rather than in a workflow keyed on the tag. A tag pushed by an
+  # action starts no further workflow, and the first symptom is a release with
+  # nothing attached to it — which is exactly how v1.0.0 went out.
+  goreleaser:
+    needs: release-please
+    # `always()` so a manual run still gets here with release-please skipped.
+    if: |
+      always() && (needs.release-please.outputs.release_created == 'true'
+      || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.tag || needs.release-please.outputs.tag_name }}
+          fetch-depth: 0
+      - name: Set up Go
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+      - name: Run GoReleaser
+        uses: goreleaser/goreleaser-action@f06c13b6b1a9625abc9e6e439d9c05a8f2190e94 # v7.2.3
+        with:
+          distribution: goreleaser
+          version: "~> v2"
+          args: release --clean
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
