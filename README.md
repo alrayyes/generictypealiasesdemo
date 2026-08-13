@@ -211,6 +211,6 @@ leaves that body empty.
 dependencies current. Pull requests that pass CI merge automatically (see
 [`auto-merge-dependabot.yml`](./.github/workflows/auto-merge-dependabot.yml)).
 
-## License
+## Licence
 
 [GPL-3.0-only](./LICENSE)
