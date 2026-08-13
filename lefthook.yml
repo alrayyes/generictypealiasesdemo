@@ -39,6 +39,22 @@ pre-push:
       run: bun run prettier:lint "**/*.{md,yml,yaml}"
     markdown:
       run: bun run markdown:lint
+    # These three are not installed by `bun install`, so a fresh clone would
+    # otherwise fail the push with `command not found`. Skipping keeps the hook
+    # usable before you've installed them; CI runs all three unconditionally, so
+    # nothing gets through unchecked.
+    yamllint:
+      skip:
+        - run: "! command -v yamllint"
+      run: yamllint --strict .
+    actionlint:
+      skip:
+        - run: "! command -v actionlint"
+      run: actionlint
+    typos:
+      skip:
+        - run: "! command -v typos"
+      run: typos
     hadolint:
       run: |
         docker compose run --rm -T hadolint hadolint docker/golang/Dockerfile
