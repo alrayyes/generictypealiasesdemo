@@ -1,0 +1,6 @@
+[files]
+# release-please writes CHANGELOG.md out of commit subjects. A typo in one of
+# those is history — "auto merge relesae please prs" is what the v1.5.0 commit
+# actually said, and correcting the changelog would only make it misquote the
+# commit it links to. Generated text isn't ours to spell-check.
+extend-exclude = ["CHANGELOG.md"]
