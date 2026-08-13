@@ -9,26 +9,21 @@ jobs:
     # renamed it every time the version moved. The branch ruleset requires it by
     # name, and it was still asking for "(20)" — a check nothing had produced
     # since the bump, which is a merge that hangs rather than an error anyone
-    # sees. One version belongs here, written once, where renaming it is a
-    # deliberate act.
+    # sees. The name is written once here, where renaming it is a deliberate act
+    # that goes with an edit to the ruleset.
     name: Prettier & markdown linting
     runs-on: ubuntu-22.04
-    env:
-      NODE_VERSION: 23
     steps:
       - uses: actions/checkout@v7
-      - name: Install pnpm
-        uses: pnpm/action-setup@v6.0.10
+      - name: Install bun
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
         with:
-          version: 10
-      - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v7.0.0
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: "pnpm"
+          # Read from `packageManager` in package.json, so the version is
+          # written down once and CI can't quietly float off it.
+          bun-version-file: package.json
       - name: Install dependencies
-        run: pnpm install
+        run: bun install --frozen-lockfile
       - name: Prettier lint
-        run: pnpm prettier:lint .
+        run: bun prettier:lint .
       - name: markdown lint
-        run: pnpm markdown:lint .
+        run: bun markdown:lint .
