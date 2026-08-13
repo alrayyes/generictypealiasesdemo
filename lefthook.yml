@@ -1,0 +1,56 @@
+# pre-commit fixes what a tool can settle on its own and restages the result.
+# The whole-tree checks, the build and the tests belong to pre-push, which
+# never writes.
+pre-commit:
+  commands:
+    # `run --fix` applies the gofmt formatter too, so there's no separate
+    # `go fmt` step to fight with it over the same lines.
+    golangci-lint:
+      glob: "*.go"
+      run: golangci-lint run --fix
+      stage_fixed: true
+    biome:
+      glob: "*"
+      run: bun run biome:format {staged_files}
+      stage_fixed: true
+    # Prettier decides the layout and markdownlint then judges what Prettier
+    # produced. The other order has markdownlint fixing something Prettier is
+    # about to overwrite.
+    markdown:
+      glob: "*.md"
+      run: bun run prettier:format {staged_files} && bun run markdown:format {staged_files}
+      stage_fixed: true
+    # YAML is Prettier's too, but on its own job: markdownlint has no business
+    # being handed a workflow file, so it gets the Markdown and this gets the
+    # rest. The two globs don't overlap, so neither waits on the other.
+    yaml:
+      glob: "*.{yml,yaml}"
+      run: bun run prettier:format {staged_files}
+      stage_fixed: true
+    hadolint:
+      glob: "*Dockerfile"
+      run: docker compose run --rm -T hadolint hadolint {staged_files}
+
+pre-push:
+  commands:
+    biome:
+      run: bun run biome:lint .
+    prettier:
+      run: bun run prettier:lint "**/*.{md,yml,yaml}"
+    markdown:
+      run: bun run markdown:lint
+    hadolint:
+      run: |
+        docker compose run --rm -T hadolint hadolint docker/golang/Dockerfile
+        docker compose run --rm -T hadolint hadolint docker/hadolint/Dockerfile
+    build:
+      run: go mod download && go build -v ./...
+    golangci-lint:
+      run: golangci-lint run
+    test:
+      run: go test -cover ./...
+
+commit-msg:
+  commands:
+    commitlint:
+      run: bunx commitlint --edit {1}
